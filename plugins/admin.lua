@@ -153,10 +153,10 @@ end
 local function run(msg,matches)
     local receiver = get_receiver(msg)
     local group = msg.to.id
-	local print_name = user_print_name(msg.from):gsub("‮", "")
+	local print_name = user_print_name(msg.from):gsub("?", "")
 	local name_log = print_name:gsub("_", " ")
     if not is_admin1(msg) then
-    	return 
+    	return
     end
     if msg.media then
       	if msg.media.type == 'photo' and redis:get("bot:photo") then
@@ -185,7 +185,7 @@ local function run(msg,matches)
     	send_large_msg("user#id"..matches[2],text)
     	return "Message has been sent"
     end
-    
+
     if matches[1] == "pmblock" then
     	if is_admin2(matches[2]) then
     		return "You can't block admins"
@@ -197,7 +197,7 @@ local function run(msg,matches)
     	unblock_user("user#id"..matches[2],ok_cb,false)
     	return "User unblocked"
     end
-    if matches[1] == "import" then--join by group link
+    if matches[1] == "add" then--join by group link
     	local hash = parsed_url(matches[2])
     	import_chat_link(hash,ok_cb,false)
     end
@@ -215,12 +215,12 @@ local function run(msg,matches)
       del_contact("user#id"..matches[2],ok_cb,false)
       return "User "..matches[2].." removed from contact list"
     end
-    if matches[1] == "addcontact" and is_sudo(msg) then
+    if matches[1] == "ac" and is_sudo(msg) then
     phone = matches[2]
     first_name = matches[3]
     last_name = matches[4]
     add_contact(phone, first_name, last_name, ok_cb, false)
-   return "User With Phone +"..matches[2].." has been added"
+   return "????? +"..matches[2].."???? "..matches[3].." ????? ??"
 end
  if matches[1] == "sendcontact" and is_sudo(msg) then
     phone = matches[2]
@@ -258,10 +258,9 @@ end
       		print(k, v.." Globally banned")
     	end
     end
-	if matches[1] == 'reload' then
+	if matches[1] == 're' then
 		receiver = get_receiver(msg)
 		reload_plugins(true)
-		post_msg(receiver, "Reloaded!", ok_cb, false)
 		return "Reloaded!"
 	end
 	--[[*For Debug*
@@ -273,7 +272,7 @@ end
 		local data = load_data(_config.moderation.data)
 		local long_id = data[tostring(msg.to.id)]['long_id']
 		if not long_id then
-			data[tostring(msg.to.id)]['long_id'] = msg.to.peer_id 
+			data[tostring(msg.to.id)]['long_id'] = msg.to.peer_id
 			save_data(_config.moderation.data, data)
 			return "Updated ID"
 		end
@@ -307,7 +306,7 @@ end
 return {
   patterns = {
 	"^[#!/](pm) (%d+) (.*)$",
-	"^[#!/](import) (.*)$",
+	"^[#!/](add) (.*)$",
 	"^[#!/](pmunblock) (%d+)$",
 	"^[#!/](pmblock) (%d+)$",
 	"^[#!/](markread) (on)$",
@@ -316,10 +315,10 @@ return {
 	"^[#!/](contactlist)$",
 	"^[#!/](dialoglist)$",
 	"^[#!/](delcontact) (%d+)$",
-	"^[#!/](addcontact) (.*) (.*) (.*)$", 
+	"^[#!/](ac) (.*) (.*) (.*)$",
 	"^[#!/](sendcontact) (.*) (.*) (.*)$",
 	"^[#!/](mycontact)$",
-	"^[#/!](reload)$",
+	"^[#/!](re)$",
 	"^[#/!](updateid)$",
 	"^[#/!](sync_gbans)$",
 	"^[#/!](addlog)$",
@@ -329,6 +328,3 @@ return {
   run = run,
   pre_process = pre_process
 }
---By @imandaneshi :)
---https://github.com/SEEDTEAM/TeleSeed/blob/test/plugins/admin.lua
----Modified by @Rondoozle for supergroups
