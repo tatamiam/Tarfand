@@ -228,36 +228,45 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
-	"supergroup",
-	"whitelist",
-	"msg_checks"
+    "whitelist",
+    "msg_checks",
+    "plugins",
+    "on-off",
+    "saveplug",
+    "sethelp",
+    "time",
+    "sendplug",
+    "id",
+    "nerkh",
+    "rmsg",
+    "lock_emoji",
+    "lock_join",
+    "lock_media",
+    "lock_operator",
+    "lock_reply",
+    "lock_tag",
+    "lock_username",
+    "lock_english",
+    "lock_fwd",
+    "badword",
+    "lock_fosh",
+    "linkpv",
+    "dlpl",
+    "write",
+    "supergroup",
+    "quran",
+    "serverinfo"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {234724442,0,0,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v4
 An advanced administration bot based on TG-CLI written in Lua
 
-https://github.com/SEEDTEAM/TeleSeed
+https://github.com/CSS3352/Doostiha
 
 Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@POTUS [Developer]
-@seyedan25 [Manager]
-@aRandomStranger [Admin]
+@technooooo
 
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
-
-Our website 
-http://teleseed.seedteam.org/
 ]],
     help_text_realm = [[
 Realm Commands:
