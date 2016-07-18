@@ -212,7 +212,7 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-	"admin",
+    "admin",
     "onservice",
     "inrealm",
     "ingroup",
@@ -237,7 +237,6 @@ function create_config( )
     "time",
     "sendplug",
     "id",
-    "nerkh",
     "rmsg",
     "lock_emoji",
     "lock_join",
@@ -254,7 +253,6 @@ function create_config( )
     "dlpl",
     "write",
     "supergroup",
-    "quran",
     "serverinfo"
     },
     sudo_users = {234724442,0,0,0,tonumber(our_id)},--Sudo users
