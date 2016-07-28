@@ -236,7 +236,6 @@ function create_config( )
     "sethelp",
     "time",
     "sendplug",
-    "id",
     "rmsg",
     "lock_emoji",
     "lock_join",
@@ -253,7 +252,15 @@ function create_config( )
     "dlpl",
     "write",
     "supergroup",
-    "serverinfo"
+    "serverinfo",
+    "idme",
+    "info",
+    "st2ph",
+    "ph2st",
+    "wai",
+    "setwlc",
+    "weather",
+    "Voice"
     },
     sudo_users = {234724442,0,0,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
