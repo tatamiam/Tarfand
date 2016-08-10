@@ -24,8 +24,8 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/CSS3352/Doostiha.git -b supergroups
-cd TeleSeed
+git clone https://github.com/Tarfand-pro/Tarfand.git -b supergroups
+cd Tarfand
 chmod +x launch.sh
 ./launch.sh install
 ./launch.sh # Enter a phone number & confirmation code.
@@ -46,7 +46,7 @@ After you run the bot for first time, send it `!id`. Get your ID and stop the bo
 Open ./data/config.lua and add your ID to the "sudo_users" section in the following format:
 ```
   sudo_users = {
-    234724442,
+    234747442,
     0,
     0,
     0,
