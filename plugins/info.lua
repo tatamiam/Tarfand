@@ -194,7 +194,7 @@ local function run(msg, matches)
 	 text = text..'Group name : '..msg.to.title..'\n\n'
      text = text..'Group ID : '..msg.to.id
     end
-	text = text..'\nGroup name : '..msg.to.title..' \nGroup ID : '..msg.to.id..'\n---------------------------------\n@Doostiha'
+	text = text..'\nGroup name : '..msg.to.title..' \nGroup ID : '..msg.to.id..'\n---------------------------------\n@NECCBOT'
     return send_msg(receiver, text, ok_cb, true)
     end
   end
