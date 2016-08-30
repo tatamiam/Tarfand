@@ -233,7 +233,6 @@ function create_config( )
     "plugins",
     "on-off",
     "saveplug",
-    "sethelp",
     "time",
     "sendplug",
     "rmsg",
