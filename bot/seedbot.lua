@@ -261,15 +261,15 @@ function create_config( )
     "weather",
     "Voice"
     },
-    sudo_users = {234724442,0,0,0,tonumber(our_id)},--Sudo users
+    sudo_users = {125734499,0,0,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v4
 An advanced administration bot based on TG-CLI written in Lua
 
-https://github.com/CSS3352/Doostiha
+https://github.com/Tarfand-pro/Tarfand
 
 Admins
-@technooooo
+@NECCBOT
 
 ]],
     help_text_realm = [[
