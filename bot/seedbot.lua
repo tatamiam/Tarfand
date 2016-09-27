@@ -259,7 +259,9 @@ function create_config( )
     "wai",
     "setwlc",
     "weather",
-    "Voice"
+    "Voice",
+    "help"
+
     },
     sudo_users = {125734499,0,0,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
