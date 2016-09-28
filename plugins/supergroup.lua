@@ -841,11 +841,11 @@ local function enable_strict_rules(msg, data, target)
   end
   local group_strict_lock = data[tostring(target)]['settings']['strict']
   if group_strict_lock == 'yes' then
-    return ' | "..msg.from.id.. | Turned on strict settings of | "..msg.to.print_name.." | '
+    return 'Turned on strict settings of'
   else
     data[tostring(target)]['settings']['strict'] = 'yes'
     save_data(_config.moderation.data, data)
-    return ' | "..msg.from.id.. | Turned on strict settings of | "..msg.to.print_name.." | '
+    return 'Turned on strict settings of'
   end
 end
 
