@@ -240,7 +240,6 @@ function create_config( )
     "lock_join",
     "lock_media",
     "lock_operator",
-    "lock_reply",
     "lock_tag",
     "lock_username",
     "lock_english",
